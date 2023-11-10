@@ -10,6 +10,10 @@ buildscript {
     }
 }
 
+plugins {
+  id 'org.checkerframework' version '0.6.35'
+}
+
 apply plugin: "io.github.gradle-nexus.publish-plugin"
 
 nexusPublishing {
@@ -25,6 +29,16 @@ nexusPublishing {
 
 allprojects {
     apply plugin: "idea"
+    apply plugin: 'org.checkerframework'
+
+    checkerFramework {
+      checkers = [
+        'org.checkerframework.checker.optional.OptionalChecker',
+      ]
+      extraJavacArgs = [
+        '-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno'
+      ]
+    }
 
     repositories {
         mavenCentral()

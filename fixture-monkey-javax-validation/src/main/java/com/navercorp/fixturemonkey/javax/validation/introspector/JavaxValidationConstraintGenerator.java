@@ -52,6 +52,7 @@ public class JavaxValidationConstraintGenerator {
 	private static final BigInteger BIG_INTEGER_MIN_BYTE = BigInteger.valueOf(Byte.MIN_VALUE);
 	private static final BigInteger BIG_INTEGER_MAX_BYTE = BigInteger.valueOf(Byte.MAX_VALUE);
 
+	@SuppressWarnings("optional:method.invocation") // application-invariant : Optional.map invocation always present.
 	public JavaxValidationStringConstraint generateStringConstraint(ArbitraryGeneratorContext context) {
 		BigInteger min = null;
 		BigInteger max = null;
@@ -91,6 +92,7 @@ public class JavaxValidationConstraintGenerator {
 		return new JavaxValidationStringConstraint(min, max, digits, notBlank);
 	}
 
+	@SuppressWarnings("optional:method.invocation") // application-invariant : Optional.map invocation always present.
 	public JavaxValidationIntegerConstraint generateIntegerConstraint(ArbitraryGeneratorContext context) {
 		BigInteger min = null;
 		BigInteger max = null;
@@ -218,6 +220,7 @@ public class JavaxValidationConstraintGenerator {
 		return new JavaxValidationIntegerConstraint(min, max);
 	}
 
+	@SuppressWarnings("optional:method.invocation") // application-invariant : Optional.map invocation always present.
 	public JavaxValidationDecimalConstraint generateDecimalConstraint(ArbitraryGeneratorContext context) {
 		BigDecimal min = null;
 		Boolean minInclusive = null;

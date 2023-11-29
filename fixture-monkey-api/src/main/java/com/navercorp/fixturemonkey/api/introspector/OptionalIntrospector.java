@@ -48,6 +48,7 @@ public final class OptionalIntrospector implements ArbitraryIntrospector, Matche
 	}
 
 	@Override
+	@SuppressWarnings("optional:optional.parameter") // optional-parameter : use of optional as a parameter
 	public ArbitraryIntrospectorResult introspect(ArbitraryGeneratorContext context) {
 		ArbitraryProperty property = context.getArbitraryProperty();
 		if (!property.isContainer()) {

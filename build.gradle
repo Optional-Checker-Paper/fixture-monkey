@@ -38,8 +38,10 @@ allprojects {
       extraJavacArgs = [
         '-AskipDefs=.*Test',
         '-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno',
-        '-AassumePure'
-      ]
+        '-AassumePure',
+        '-AwarnUnneededSuppressions'
+       ]
+       excludeTests = true
     }
 
     repositories {

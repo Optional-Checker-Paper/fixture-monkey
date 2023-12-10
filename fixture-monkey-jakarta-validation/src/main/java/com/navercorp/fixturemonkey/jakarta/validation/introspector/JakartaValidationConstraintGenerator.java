@@ -52,7 +52,7 @@ public class JakartaValidationConstraintGenerator {
 	private static final BigInteger BIG_INTEGER_MIN_BYTE = BigInteger.valueOf(Byte.MIN_VALUE);
 	private static final BigInteger BIG_INTEGER_MAX_BYTE = BigInteger.valueOf(Byte.MAX_VALUE);
 
-	@SuppressWarnings("optional:method.invocation") // application-invariant : Optional.map invocation always present.
+	@SuppressWarnings("optional:method.invocation") // Optional.map invocation always present
 	public JakartaValidationStringConstraint generateStringConstraint(ArbitraryGeneratorContext context) {
 		BigInteger min = null;
 		BigInteger max = null;
@@ -92,7 +92,7 @@ public class JakartaValidationConstraintGenerator {
 		return new JakartaValidationStringConstraint(min, max, digits, notBlank);
 	}
 
-	@SuppressWarnings("optional:method.invocation") // application-invariant : Optional.map invocation always present.
+	@SuppressWarnings("optional:method.invocation") // Optional.map invocation always present
 	public JakartaValidationIntegerConstraint generateIntegerConstraint(ArbitraryGeneratorContext context) {
 		BigInteger min = null;
 		BigInteger max = null;
@@ -220,7 +220,7 @@ public class JakartaValidationConstraintGenerator {
 		return new JakartaValidationIntegerConstraint(min, max);
 	}
 
-	@SuppressWarnings("optional:method.invocation") // application-invariant : Optional.map invocation always present.
+	@SuppressWarnings("optional:method.invocation") // Optional.map invocation always present
 	public JakartaValidationDecimalConstraint generateDecimalConstraint(ArbitraryGeneratorContext context) {
 		BigDecimal min = null;
 		Boolean minInclusive = null;

@@ -48,7 +48,6 @@ public final class OptionalIntrospector implements ArbitraryIntrospector, Matche
 	}
 
 	@Override
-	@SuppressWarnings("optional:optional.parameter") // style-optional-parameter
 	public ArbitraryIntrospectorResult introspect(ArbitraryGeneratorContext context) {
 		ArbitraryProperty property = context.getArbitraryProperty();
 		if (!property.isContainer()) {

@@ -35,12 +35,14 @@ allprojects {
     checkerFramework {
       checkers = [
         'org.checkerframework.checker.optional.OptionalChecker',
+        'org.checkerframework.common.util.report.ReportChecker'
       ]
       extraJavacArgs = [
         '-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno',
         '-AassumePure',
         '-AwarnUnneededSuppressions',
         '-AassumeAssertionsAreEnabled',
+        "-Astubs=${project.projectDir}/reportoptional.astub",
        ]
        excludeTests = true
     }
@@ -138,4 +140,10 @@ subprojects {
     tasks.withType(Sign) {
         onlyIf { !version.endsWith("SNAPSHOT") }
     }
+}
+
+afterEvaluate {
+     tasks.withType(JavaCompile) {
+         options.compilerArgs << "-Xmaxerrs" << "99999"
+     }
 }

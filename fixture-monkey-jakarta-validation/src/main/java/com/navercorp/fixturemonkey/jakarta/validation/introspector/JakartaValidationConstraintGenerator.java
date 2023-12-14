@@ -52,7 +52,6 @@ public class JakartaValidationConstraintGenerator {
 	private static final BigInteger BIG_INTEGER_MIN_BYTE = BigInteger.valueOf(Byte.MIN_VALUE);
 	private static final BigInteger BIG_INTEGER_MAX_BYTE = BigInteger.valueOf(Byte.MAX_VALUE);
 
-        @SuppressWarnings("optional:method.invocation") // present.map(fn) -> present: size.isPresent() and digitsAnnotation.isPresent() were checked
 	public JakartaValidationStringConstraint generateStringConstraint(ArbitraryGeneratorContext context) {
 		BigInteger min = null;
 		BigInteger max = null;
@@ -92,7 +91,6 @@ public class JakartaValidationConstraintGenerator {
 		return new JakartaValidationStringConstraint(min, max, digits, notBlank);
 	}
 
-	@SuppressWarnings("optional:method.invocation") // present.map(fn) -> present: tested minAnnotation, decimalMinAnnotation, maxAnnotation, decimalMaxAnnotation
 	public JakartaValidationIntegerConstraint generateIntegerConstraint(ArbitraryGeneratorContext context) {
 		BigInteger min = null;
 		BigInteger max = null;
@@ -220,7 +218,6 @@ public class JakartaValidationConstraintGenerator {
 		return new JakartaValidationIntegerConstraint(min, max);
 	}
 
-	@SuppressWarnings("optional:method.invocation") // present.map(fn) -> present: tested minAnnotation, decimalMinAnnotation, maxAnnotation, decimalMaxAnnotation
 	public JakartaValidationDecimalConstraint generateDecimalConstraint(ArbitraryGeneratorContext context) {
 		BigDecimal min = null;
 		Boolean minInclusive = null;

@@ -1,0 +1,1169 @@
+
+> Configure project :
+No android or java plugins found in the project fixture-monkey-parent, checker compiler options will not be applied.
+
+The Kotlin Gradle plugin was loaded multiple times in different subprojects, which is not supported and may break the build. 
+This might happen in subprojects that apply the Kotlin plugins with the Gradle 'plugins { ... }' DSL if they specify explicit versions, even if the versions are equal.
+Please add the Kotlin plugin to the common parent project or the root project, then remove the versions in the subprojects.
+If the parent project does not need the plugin, add 'apply false' to the plugin line.
+See: https://docs.gradle.org/current/userguide/plugins.html#sec:subprojects_plugins_dsl
+The Kotlin plugin was loaded in the following projects: ':fixture-monkey-kotlin', ':fixture-monkey-starter-kotlin', ':fixture-monkey-tests:kotlin-tests'
+
+> Task :fixture-monkey:createCheckerFrameworkManifest
+> Task :fixture-monkey-api:createCheckerFrameworkManifest
+
+> Task :fixture-monkey-api:compileJava
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/Property.java:78: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	default <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                           ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/Property.java:78: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	default <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                           ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/Property.java:82: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+			.findFirst();
+			          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/generator/ArbitraryGeneratorContext.java:103: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> findAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/generator/ArbitraryGeneratorContext.java:103: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> findAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/generator/ArbitraryGeneratorContext.java:104: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		return this.getResolvedProperty().getAnnotation(annotationClass);
+		                                               ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/arbitrary/MonkeyStringArbitrary.java:69: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse((long)maxLength());
+			       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/arbitrary/MonkeyStringArbitrary.java:69: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse((long)maxLength());
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/arbitrary/MonkeyStringArbitrary.java:68: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(ExhaustiveGenerator::maxCount)
+			    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/arbitrary/MonkeyStringArbitrary.java:68: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(ExhaustiveGenerator::maxCount)
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/arbitrary/MonkeyStringArbitrary.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public Optional<ExhaustiveGenerator<String>> exhaustive(long maxNumberOfSamples) {
+	                                             ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/arbitrary/MonkeyStringArbitrary.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public Optional<ExhaustiveGenerator<String>> exhaustive(long maxNumberOfSamples) {
+	                                             ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/arbitrary/MonkeyStringArbitrary.java:84: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		return ExhaustiveGenerators.strings(
+		                                   ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/CompositeProperty.java:76: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/CompositeProperty.java:77: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<T> annotation = this.primaryProperty.getAnnotation(annotationClass);
+		            ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/CompositeProperty.java:77: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<T> annotation = this.primaryProperty.getAnnotation(annotationClass);
+		                                                           ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/CompositeProperty.java:78: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (!annotation.isPresent()) {
+		                         ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/CompositeProperty.java:78: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (!annotation.isPresent()) {
+		               ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/CompositeProperty.java:79: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+			annotation = this.secondaryProperty.getAnnotation(annotationClass);
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/CompositeProperty.java:79: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+			annotation = this.secondaryProperty.getAnnotation(annotationClass);
+			                                                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/CompositeProperty.java:76: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/CompositeProperty.java:82: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		return annotation;
+		       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/PropertyDescriptorProperty.java:104: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/PropertyDescriptorProperty.java:104: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/PropertyDescriptorProperty.java:106: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+			.map(annotationClass::cast);
+			    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/PropertyDescriptorProperty.java:106: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(annotationClass::cast);
+			    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/PropertyDescriptorProperty.java:106: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(annotationClass::cast);
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/PropertyDescriptorProperty.java:105: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+		return Optional.ofNullable(this.annotationsMap.get(annotationClass))
+		                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/PropertyDescriptorProperty.java:105: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+		return Optional.ofNullable(this.annotationsMap.get(annotationClass))
+		               ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ConstructorProperty.java:93: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ConstructorProperty.java:93: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ConstructorProperty.java:95: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+			.map(annotationClass::cast);
+			    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ConstructorProperty.java:95: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(annotationClass::cast);
+			    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ConstructorProperty.java:95: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(annotationClass::cast);
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ConstructorProperty.java:94: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+		return Optional.ofNullable(this.annotationsMap.get(annotationClass))
+		                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ConstructorProperty.java:94: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+		return Optional.ofNullable(this.annotationsMap.get(annotationClass))
+		               ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/FieldProperty.java:93: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/FieldProperty.java:93: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/FieldProperty.java:95: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+			.map(annotationClass::cast);
+			    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/FieldProperty.java:95: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(annotationClass::cast);
+			    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/FieldProperty.java:95: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(annotationClass::cast);
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/FieldProperty.java:94: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+		return Optional.ofNullable(this.annotationsMap.get(annotationClass))
+		                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/FieldProperty.java:94: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+		return Optional.ofNullable(this.annotationsMap.get(annotationClass))
+		               ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/InterfaceJavaMethodProperty.java:84: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/InterfaceJavaMethodProperty.java:84: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/InterfaceJavaMethodProperty.java:86: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+			.map(annotationClass::cast);
+			    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/InterfaceJavaMethodProperty.java:86: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(annotationClass::cast);
+			    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/InterfaceJavaMethodProperty.java:86: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(annotationClass::cast);
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/InterfaceJavaMethodProperty.java:85: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+		return Optional.ofNullable(this.annotationsMap.get(annotationClass))
+		                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/InterfaceJavaMethodProperty.java:85: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+		return Optional.ofNullable(this.annotationsMap.get(annotationClass))
+		               ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ElementProperty.java:112: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ElementProperty.java:112: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+	public <T extends Annotation> Optional<T> getAnnotation(Class<T> annotationClass) {
+	                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ElementProperty.java:114: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+			.map(annotationClass::cast);
+			    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ElementProperty.java:114: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(annotationClass::cast);
+			    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ElementProperty.java:114: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(annotationClass::cast);
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ElementProperty.java:113: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+		return Optional.ofNullable(this.annotationsMap.get(annotationClass))
+		                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ElementProperty.java:113: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+		return Optional.ofNullable(this.annotationsMap.get(annotationClass))
+		               ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ElementProperty.java:164: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.class [FIELD]
+		return Optional.class.isAssignableFrom(type)
+		               ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ElementProperty.java:173: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.class [FIELD]
+		if (Optional.class.isAssignableFrom(actualType)) {
+		            ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ElementProperty.java:174: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			return ((Optional<?>)obj).orElse(null);
+			                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ElementProperty.java:174: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			return ((Optional<?>)obj).orElse(null);
+			                         ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/property/ElementProperty.java:174: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+			return ((Optional<?>)obj).orElse(null);
+			        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:174: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(this.getDefaultPropertyGenerator());
+			       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:174: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(this.getDefaultPropertyGenerator());
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:190: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(this.getDefaultObjectPropertyGenerator());
+			       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:190: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(this.getDefaultObjectPropertyGenerator());
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:207: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(null);
+			       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:207: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(null);
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:219: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(this.getDefaultPropertyNameResolver());
+			       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:219: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(this.getDefaultPropertyNameResolver());
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:235: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(this.getDefaultNullInjectGenerator());
+			       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:235: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(this.getDefaultNullInjectGenerator());
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:251: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(this.getDefaultArbitraryContainerInfoGenerator());
+			       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:251: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(this.getDefaultArbitraryContainerInfoGenerator());
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:267: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(this.getDefaultArbitraryGenerator());
+			       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:267: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(this.getDefaultArbitraryGenerator());
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/option/FixtureMonkeyOptions.java:331: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.class [FIELD]
+				property -> new AssignableTypeMatcher(Optional.class).match(property)
+				                                              ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/generator/OptionalContainerPropertyGenerator.java:79: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.class [FIELD]
+		if (type != Optional.class) {
+		                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/container/DefaultDecomposedContainerValueFactory.java:77: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.class [FIELD]
+		return Optional.class.isAssignableFrom(type)
+		               ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/type/TypeCache.java:142: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<X>orElseThrow(java.util.function.Supplier<? extends X>) [METHOD]
+						.orElseThrow(() -> new IllegalArgumentException(
+						            ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/type/TypeCache.java:142: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<X>orElseThrow(java.util.function.Supplier<? extends X>) [METHOD]
+						.orElseThrow(() -> new IllegalArgumentException(
+						^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/type/TypeCache.java:148: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+						.orElse(null);
+						       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/type/TypeCache.java:148: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+						.orElse(null);
+						^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:44: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.class [FIELD]
+		return type == Optional.class
+		                       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:60: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+				CombinableArbitrary.from(Optional.empty())
+				                                       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:60: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>empty() [METHOD]
+				CombinableArbitrary.from(Optional.empty())
+				                                       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:60: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>empty() [METHOD]
+				CombinableArbitrary.from(Optional.empty())
+				                                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:82: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+							.map(it -> {
+							     ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:82: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+							.map(it -> {
+							     ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:85: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElseGet(java.util.function.Supplier<? extends T>) [METHOD]
+										.orElseGet(OptionalInt::empty);
+										          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:85: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElseGet(java.util.function.Supplier<? extends T>) [METHOD]
+										.orElseGet(OptionalInt::empty);
+										^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:84: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+									return it.map(o -> OptionalInt.of((Integer)o))
+									             ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:84: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+									return it.map(o -> OptionalInt.of((Integer)o))
+									         ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:88: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElseGet(java.util.function.Supplier<? extends T>) [METHOD]
+										.orElseGet(OptionalLong::empty);
+										          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:88: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElseGet(java.util.function.Supplier<? extends T>) [METHOD]
+										.orElseGet(OptionalLong::empty);
+										^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:87: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+									return it.map(o -> OptionalLong.of((Long)o))
+									             ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:87: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+									return it.map(o -> OptionalLong.of((Long)o))
+									         ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:91: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElseGet(java.util.function.Supplier<? extends T>) [METHOD]
+										.orElseGet(OptionalDouble::empty);
+										          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:91: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElseGet(java.util.function.Supplier<? extends T>) [METHOD]
+										.orElseGet(OptionalDouble::empty);
+										^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-api/src/main/java/com/navercorp/fixturemonkey/api/introspector/OptionalIntrospector.java:90: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+									return it.map(o -> OptionalDouble.of((Double)o))
+									             ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+100 warnings
+
+> Task :fixture-monkey:compileJava
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey/src/main/java/com/navercorp/fixturemonkey/tree/ArbitraryTraverser.java:89: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+				.orElse(null);
+				       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey/src/main/java/com/navercorp/fixturemonkey/tree/ArbitraryTraverser.java:89: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+				.orElse(null);
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey/src/main/java/com/navercorp/fixturemonkey/tree/TraverseContext.java:77: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+				.orElse(Collections.emptyList());
+				       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey/src/main/java/com/navercorp/fixturemonkey/tree/TraverseContext.java:77: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+				.orElse(Collections.emptyList());
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey/src/main/java/com/navercorp/fixturemonkey/customizer/MonkeyManipulatorFactory.java:143: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+					.orElse(null);
+					       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey/src/main/java/com/navercorp/fixturemonkey/customizer/MonkeyManipulatorFactory.java:143: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+					.orElse(null);
+					^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey/src/main/java/com/navercorp/fixturemonkey/customizer/MonkeyManipulatorFactory.java:142: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.filter(java.util.function.Predicate<? super T>) [METHOD]
+					.filter(it -> it instanceof DefaultArbitraryBuilder<?>)
+					       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey/src/main/java/com/navercorp/fixturemonkey/customizer/MonkeyManipulatorFactory.java:142: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.filter(java.util.function.Predicate<? super T>) [METHOD]
+					.filter(it -> it instanceof DefaultArbitraryBuilder<?>)
+					^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey/src/main/java/com/navercorp/fixturemonkey/customizer/MonkeyManipulatorFactory.java:141: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+					.map(MatcherOperator::getOperator)
+					    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey/src/main/java/com/navercorp/fixturemonkey/customizer/MonkeyManipulatorFactory.java:141: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+					.map(MatcherOperator::getOperator)
+					^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey/src/main/java/com/navercorp/fixturemonkey/FixtureMonkey.java:100: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(null);
+			       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey/src/main/java/com/navercorp/fixturemonkey/FixtureMonkey.java:100: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+			.orElse(null);
+			^
+Note: /tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey/src/main/java/com/navercorp/fixturemonkey/FixtureMonkeyBuilder.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+12 warnings
+
+> Task :fixture-monkey:processResources NO-SOURCE
+> Task :fixture-monkey:classes
+> Task :fixture-monkey:jar
+> Task :fixture-monkey:javadoc SKIPPED
+> Task :fixture-monkey:javadocJar
+> Task :fixture-monkey:sourcesJar
+> Task :fixture-monkey:assemble
+> Task :fixture-monkey-api:processResources NO-SOURCE
+> Task :fixture-monkey-api:classes
+> Task :fixture-monkey-api:jar
+> Task :fixture-monkey-api:javadoc SKIPPED
+> Task :fixture-monkey-api:javadocJar
+> Task :fixture-monkey-api:sourcesJar
+> Task :fixture-monkey-api:assemble
+> Task :fixture-monkey-autoparams:createCheckerFrameworkManifest
+> Task :fixture-monkey-engine:createCheckerFrameworkManifest
+> Task :fixture-monkey-engine:compileJava
+> Task :fixture-monkey-autoparams:compileJava
+> Task :fixture-monkey-autoparams:processResources NO-SOURCE
+> Task :fixture-monkey-autoparams:classes
+> Task :fixture-monkey-autoparams:jar
+> Task :fixture-monkey-autoparams:javadoc SKIPPED
+> Task :fixture-monkey-autoparams:javadocJar
+> Task :fixture-monkey-autoparams:sourcesJar
+> Task :fixture-monkey-autoparams:assemble
+> Task :fixture-monkey-engine:processResources NO-SOURCE
+> Task :fixture-monkey-engine:classes
+> Task :fixture-monkey-engine:jar
+> Task :fixture-monkey-engine:javadoc SKIPPED
+> Task :fixture-monkey-engine:javadocJar
+> Task :fixture-monkey-engine:sourcesJar
+> Task :fixture-monkey-engine:assemble
+> Task :fixture-monkey-jackson:createCheckerFrameworkManifest
+
+> Task :fixture-monkey-jackson:compileJava
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jackson/src/main/java/com/navercorp/fixturemonkey/jackson/property/JacksonAnnotations.java:39: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+		T propertyAnnotation = property.getAnnotation(annotationClass).orElse(null);
+		                                                                     ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jackson/src/main/java/com/navercorp/fixturemonkey/jackson/property/JacksonAnnotations.java:39: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+		T propertyAnnotation = property.getAnnotation(annotationClass).orElse(null);
+		                                                              ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jackson/src/main/java/com/navercorp/fixturemonkey/jackson/property/JacksonPropertyNameResolver.java:35: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElseGet(java.util.function.Supplier<? extends T>) [METHOD]
+			.orElseGet(property::getName);
+			          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jackson/src/main/java/com/navercorp/fixturemonkey/jackson/property/JacksonPropertyNameResolver.java:35: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElseGet(java.util.function.Supplier<? extends T>) [METHOD]
+			.orElseGet(property::getName);
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jackson/src/main/java/com/navercorp/fixturemonkey/jackson/property/JacksonPropertyNameResolver.java:34: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(JsonProperty::value)
+			    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jackson/src/main/java/com/navercorp/fixturemonkey/jackson/property/JacksonPropertyNameResolver.java:34: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			.map(JsonProperty::value)
+			^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jackson/src/main/java/com/navercorp/fixturemonkey/jackson/introspector/JacksonObjectArbitraryIntrospector.java:112: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+								.orElse(value);
+								       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jackson/src/main/java/com/navercorp/fixturemonkey/jackson/introspector/JacksonObjectArbitraryIntrospector.java:112: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.orElse(T) [METHOD]
+								.orElse(value);
+								^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jackson/src/main/java/com/navercorp/fixturemonkey/jackson/introspector/JacksonObjectArbitraryIntrospector.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+								.map(it -> format(value, it))
+								    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jackson/src/main/java/com/navercorp/fixturemonkey/jackson/introspector/JacksonObjectArbitraryIntrospector.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+								.map(it -> format(value, it))
+								^
+10 warnings
+
+> Task :fixture-monkey-jackson:processResources NO-SOURCE
+> Task :fixture-monkey-jackson:classes
+> Task :fixture-monkey-jackson:jar
+> Task :fixture-monkey-jackson:javadoc SKIPPED
+> Task :fixture-monkey-jackson:javadocJar
+> Task :fixture-monkey-jackson:sourcesJar
+> Task :fixture-monkey-jackson:assemble
+> Task :fixture-monkey-jakarta-validation:createCheckerFrameworkManifest
+
+> Task :fixture-monkey-jakarta-validation:compileJava
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:59: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		boolean notBlank = context.findAnnotation(NotBlank.class).isPresent();
+		                                                                   ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:59: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		boolean notBlank = context.findAnnotation(NotBlank.class).isPresent();
+		                                                         ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:61: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (notBlank || context.findAnnotation(NotEmpty.class).isPresent()) {
+		                                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:61: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (notBlank || context.findAnnotation(NotEmpty.class).isPresent()) {
+		                                                      ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:65: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Size> size = context.findAnnotation(Size.class);
+		               ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:65: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Size> size = context.findAnnotation(Size.class);
+		                                            ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:66: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (size.isPresent()) {
+		                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:66: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (size.isPresent()) {
+		        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:67: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			int minValue = size.map(Size::min).get();
+			                                      ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:67: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			int minValue = size.map(Size::min).get();
+			                                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:67: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			int minValue = size.map(Size::min).get();
+			                       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:67: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			int minValue = size.map(Size::min).get();
+			                   ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:74: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			max = BigInteger.valueOf(size.map(Size::max).get());
+			                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:74: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			max = BigInteger.valueOf(size.map(Size::max).get());
+			                                            ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:74: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			max = BigInteger.valueOf(size.map(Size::max).get());
+			                                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:74: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			max = BigInteger.valueOf(size.map(Size::max).get());
+			                             ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:78: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Digits> digitsAnnotation = context.findAnnotation(Digits.class);
+		                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:78: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Digits> digitsAnnotation = context.findAnnotation(Digits.class);
+		                                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:79: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (digitsAnnotation.isPresent()) {
+		                              ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:79: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (digitsAnnotation.isPresent()) {
+		                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			BigInteger maxValue = digitsAnnotation.map(Digits::integer).map(BigInteger::valueOf).get();
+			                                                                                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			BigInteger maxValue = digitsAnnotation.map(Digits::integer).map(BigInteger::valueOf).get();
+			                                                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = digitsAnnotation.map(Digits::integer).map(BigInteger::valueOf).get();
+			                                                               ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = digitsAnnotation.map(Digits::integer).map(BigInteger::valueOf).get();
+			                                                           ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = digitsAnnotation.map(Digits::integer).map(BigInteger::valueOf).get();
+			                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = digitsAnnotation.map(Digits::integer).map(BigInteger::valueOf).get();
+			                                      ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:98: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Digits> digits = context.findAnnotation(Digits.class);
+		                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:98: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Digits> digits = context.findAnnotation(Digits.class);
+		                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:99: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (digits.isPresent()) {
+		                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:99: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (digits.isPresent()) {
+		          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:101: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			int integer = digits.get().integer();
+			                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:101: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			int integer = digits.get().integer();
+			                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:109: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Min> minAnnotation = context.findAnnotation(Min.class);
+		              ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:109: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Min> minAnnotation = context.findAnnotation(Min.class);
+		                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:110: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (minAnnotation.isPresent()) {
+		                           ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:110: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (minAnnotation.isPresent()) {
+		                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			BigInteger minValue = minAnnotation.map(Min::value).map(BigInteger::valueOf).get();
+			                                                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			BigInteger minValue = minAnnotation.map(Min::value).map(BigInteger::valueOf).get();
+			                                                                            ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger minValue = minAnnotation.map(Min::value).map(BigInteger::valueOf).get();
+			                                                       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger minValue = minAnnotation.map(Min::value).map(BigInteger::valueOf).get();
+			                                                   ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger minValue = minAnnotation.map(Min::value).map(BigInteger::valueOf).get();
+			                                       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger minValue = minAnnotation.map(Min::value).map(BigInteger::valueOf).get();
+			                                   ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:119: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<DecimalMin> decimalMinAnnotation = context.findAnnotation(DecimalMin.class);
+		                     ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:119: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<DecimalMin> decimalMinAnnotation = context.findAnnotation(DecimalMin.class);
+		                                                                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:120: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (decimalMinAnnotation.isPresent()) {
+		                                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:120: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (decimalMinAnnotation.isPresent()) {
+		                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:124: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+				.get();
+				    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:124: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+				.get();
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:123: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(BigInteger::new)
+				    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:123: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(BigInteger::new)
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:122: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(DecimalMin::value)
+				    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:122: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(DecimalMin::value)
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:126: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			if (!decimalMinAnnotation.map(DecimalMin::inclusive).get()) {
+			                                                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:126: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			if (!decimalMinAnnotation.map(DecimalMin::inclusive).get()) {
+			                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:126: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			if (!decimalMinAnnotation.map(DecimalMin::inclusive).get()) {
+			                             ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:126: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			if (!decimalMinAnnotation.map(DecimalMin::inclusive).get()) {
+			                         ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:137: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Max> maxAnnotation = context.findAnnotation(Max.class);
+		              ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:137: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Max> maxAnnotation = context.findAnnotation(Max.class);
+		                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:138: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (maxAnnotation.isPresent()) {
+		                           ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:138: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (maxAnnotation.isPresent()) {
+		                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:139: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			BigInteger maxValue = maxAnnotation.map(Max::value).map(BigInteger::valueOf).get();
+			                                                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:139: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			BigInteger maxValue = maxAnnotation.map(Max::value).map(BigInteger::valueOf).get();
+			                                                                            ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:139: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = maxAnnotation.map(Max::value).map(BigInteger::valueOf).get();
+			                                                       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:139: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = maxAnnotation.map(Max::value).map(BigInteger::valueOf).get();
+			                                                   ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:139: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = maxAnnotation.map(Max::value).map(BigInteger::valueOf).get();
+			                                       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:139: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = maxAnnotation.map(Max::value).map(BigInteger::valueOf).get();
+			                                   ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:147: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<DecimalMax> decimalMaxAnnotation = context.findAnnotation(DecimalMax.class);
+		                     ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:147: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<DecimalMax> decimalMaxAnnotation = context.findAnnotation(DecimalMax.class);
+		                                                                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:148: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (decimalMaxAnnotation.isPresent()) {
+		                                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:148: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (decimalMaxAnnotation.isPresent()) {
+		                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:152: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+				.get();
+				    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:152: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+				.get();
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:151: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(BigInteger::new)
+				    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:151: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(BigInteger::new)
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:150: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(DecimalMax::value)
+				    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:150: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(DecimalMax::value)
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:153: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			if (!decimalMaxAnnotation.map(DecimalMax::inclusive).get()) {
+			                                                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:153: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			if (!decimalMaxAnnotation.map(DecimalMax::inclusive).get()) {
+			                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:153: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			if (!decimalMaxAnnotation.map(DecimalMax::inclusive).get()) {
+			                             ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:153: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			if (!decimalMaxAnnotation.map(DecimalMax::inclusive).get()) {
+			                         ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:164: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(Negative.class).isPresent()) {
+		                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:164: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(Negative.class).isPresent()) {
+		                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:170: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(NegativeOrZero.class).isPresent()) {
+		                                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:170: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(NegativeOrZero.class).isPresent()) {
+		                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:176: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(Positive.class).isPresent()) {
+		                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:176: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(Positive.class).isPresent()) {
+		                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:182: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(PositiveOrZero.class).isPresent()) {
+		                                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:182: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(PositiveOrZero.class).isPresent()) {
+		                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:228: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Digits> digits = context.findAnnotation(Digits.class);
+		                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:228: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Digits> digits = context.findAnnotation(Digits.class);
+		                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:229: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (digits.isPresent()) {
+		                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:229: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (digits.isPresent()) {
+		          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:231: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			int integer = digits.get().integer();
+			                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:231: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			int integer = digits.get().integer();
+			                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:237: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			scale = digits.get().fraction();
+			                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:237: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			scale = digits.get().fraction();
+			              ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:240: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Min> minAnnotation = context.findAnnotation(Min.class);
+		              ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:240: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Min> minAnnotation = context.findAnnotation(Min.class);
+		                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:241: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (minAnnotation.isPresent()) {
+		                           ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/introspector/JakartaValidationConstraintGenerator.java:241: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (minAnnotation.isPresent()) {
+		                 ^
+Note: /tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-jakarta-validation/src/main/java/com/navercorp/fixturemonkey/jakarta/validation/plugin/JakartaValidationPlugin.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+100 warnings
+
+> Task :fixture-monkey-jakarta-validation:processResources NO-SOURCE
+> Task :fixture-monkey-jakarta-validation:classes
+> Task :fixture-monkey-jakarta-validation:jar
+> Task :fixture-monkey-jakarta-validation:javadoc SKIPPED
+> Task :fixture-monkey-jakarta-validation:javadocJar
+> Task :fixture-monkey-jakarta-validation:sourcesJar
+> Task :fixture-monkey-jakarta-validation:assemble
+> Task :fixture-monkey-javax-validation:createCheckerFrameworkManifest
+
+> Task :fixture-monkey-javax-validation:compileJava
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:59: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		boolean notBlank = context.findAnnotation(NotBlank.class).isPresent();
+		                                                                   ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:59: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		boolean notBlank = context.findAnnotation(NotBlank.class).isPresent();
+		                                                         ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:61: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (notBlank || context.findAnnotation(NotEmpty.class).isPresent()) {
+		                                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:61: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (notBlank || context.findAnnotation(NotEmpty.class).isPresent()) {
+		                                                      ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:65: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Size> size = context.findAnnotation(Size.class);
+		               ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:65: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Size> size = context.findAnnotation(Size.class);
+		                                            ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:66: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (size.isPresent()) {
+		                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:66: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (size.isPresent()) {
+		        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:67: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			int minValue = size.map(Size::min).get();
+			                                      ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:67: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			int minValue = size.map(Size::min).get();
+			                                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:67: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			int minValue = size.map(Size::min).get();
+			                       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:67: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			int minValue = size.map(Size::min).get();
+			                   ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:74: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			max = BigInteger.valueOf(size.map(Size::max).get());
+			                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:74: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			max = BigInteger.valueOf(size.map(Size::max).get());
+			                                            ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:74: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			max = BigInteger.valueOf(size.map(Size::max).get());
+			                                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:74: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			max = BigInteger.valueOf(size.map(Size::max).get());
+			                             ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:78: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Digits> digitsAnnotation = context.findAnnotation(Digits.class);
+		                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:78: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Digits> digitsAnnotation = context.findAnnotation(Digits.class);
+		                                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:79: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (digitsAnnotation.isPresent()) {
+		                              ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:79: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (digitsAnnotation.isPresent()) {
+		                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			BigInteger maxValue = digitsAnnotation.map(Digits::integer).map(BigInteger::valueOf).get();
+			                                                                                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			BigInteger maxValue = digitsAnnotation.map(Digits::integer).map(BigInteger::valueOf).get();
+			                                                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = digitsAnnotation.map(Digits::integer).map(BigInteger::valueOf).get();
+			                                                               ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = digitsAnnotation.map(Digits::integer).map(BigInteger::valueOf).get();
+			                                                           ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = digitsAnnotation.map(Digits::integer).map(BigInteger::valueOf).get();
+			                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:83: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = digitsAnnotation.map(Digits::integer).map(BigInteger::valueOf).get();
+			                                      ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:98: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Digits> digits = context.findAnnotation(Digits.class);
+		                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:98: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Digits> digits = context.findAnnotation(Digits.class);
+		                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:99: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (digits.isPresent()) {
+		                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:99: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (digits.isPresent()) {
+		          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:101: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			int integer = digits.get().integer();
+			                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:101: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			int integer = digits.get().integer();
+			                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:109: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Min> minAnnotation = context.findAnnotation(Min.class);
+		              ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:109: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Min> minAnnotation = context.findAnnotation(Min.class);
+		                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:110: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (minAnnotation.isPresent()) {
+		                           ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:110: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (minAnnotation.isPresent()) {
+		                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			BigInteger minValue = minAnnotation.map(Min::value).map(BigInteger::valueOf).get();
+			                                                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			BigInteger minValue = minAnnotation.map(Min::value).map(BigInteger::valueOf).get();
+			                                                                            ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger minValue = minAnnotation.map(Min::value).map(BigInteger::valueOf).get();
+			                                                       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger minValue = minAnnotation.map(Min::value).map(BigInteger::valueOf).get();
+			                                                   ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger minValue = minAnnotation.map(Min::value).map(BigInteger::valueOf).get();
+			                                       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:111: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger minValue = minAnnotation.map(Min::value).map(BigInteger::valueOf).get();
+			                                   ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:119: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<DecimalMin> decimalMinAnnotation = context.findAnnotation(DecimalMin.class);
+		                     ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:119: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<DecimalMin> decimalMinAnnotation = context.findAnnotation(DecimalMin.class);
+		                                                                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:120: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (decimalMinAnnotation.isPresent()) {
+		                                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:120: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (decimalMinAnnotation.isPresent()) {
+		                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:124: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+				.get();
+				    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:124: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+				.get();
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:123: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(BigInteger::new)
+				    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:123: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(BigInteger::new)
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:122: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(DecimalMin::value)
+				    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:122: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(DecimalMin::value)
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:126: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			if (!decimalMinAnnotation.map(DecimalMin::inclusive).get()) {
+			                                                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:126: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			if (!decimalMinAnnotation.map(DecimalMin::inclusive).get()) {
+			                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:126: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			if (!decimalMinAnnotation.map(DecimalMin::inclusive).get()) {
+			                             ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:126: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			if (!decimalMinAnnotation.map(DecimalMin::inclusive).get()) {
+			                         ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:137: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Max> maxAnnotation = context.findAnnotation(Max.class);
+		              ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:137: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Max> maxAnnotation = context.findAnnotation(Max.class);
+		                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:138: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (maxAnnotation.isPresent()) {
+		                           ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:138: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (maxAnnotation.isPresent()) {
+		                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:139: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			BigInteger maxValue = maxAnnotation.map(Max::value).map(BigInteger::valueOf).get();
+			                                                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:139: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			BigInteger maxValue = maxAnnotation.map(Max::value).map(BigInteger::valueOf).get();
+			                                                                            ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:139: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = maxAnnotation.map(Max::value).map(BigInteger::valueOf).get();
+			                                                       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:139: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = maxAnnotation.map(Max::value).map(BigInteger::valueOf).get();
+			                                                   ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:139: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = maxAnnotation.map(Max::value).map(BigInteger::valueOf).get();
+			                                       ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:139: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			BigInteger maxValue = maxAnnotation.map(Max::value).map(BigInteger::valueOf).get();
+			                                   ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:147: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<DecimalMax> decimalMaxAnnotation = context.findAnnotation(DecimalMax.class);
+		                     ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:147: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<DecimalMax> decimalMaxAnnotation = context.findAnnotation(DecimalMax.class);
+		                                                                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:148: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (decimalMaxAnnotation.isPresent()) {
+		                                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:148: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (decimalMaxAnnotation.isPresent()) {
+		                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:152: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+				.get();
+				    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:152: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+				.get();
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:151: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(BigInteger::new)
+				    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:151: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(BigInteger::new)
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:150: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(DecimalMax::value)
+				    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:150: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+				.map(DecimalMax::value)
+				^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:153: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			if (!decimalMaxAnnotation.map(DecimalMax::inclusive).get()) {
+			                                                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:153: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			if (!decimalMaxAnnotation.map(DecimalMax::inclusive).get()) {
+			                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:153: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			if (!decimalMaxAnnotation.map(DecimalMax::inclusive).get()) {
+			                             ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:153: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<U>map(java.util.function.Function<? super T,? extends U>) [METHOD]
+			if (!decimalMaxAnnotation.map(DecimalMax::inclusive).get()) {
+			                         ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:164: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(Negative.class).isPresent()) {
+		                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:164: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(Negative.class).isPresent()) {
+		                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:170: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(NegativeOrZero.class).isPresent()) {
+		                                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:170: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(NegativeOrZero.class).isPresent()) {
+		                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:176: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(Positive.class).isPresent()) {
+		                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:176: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(Positive.class).isPresent()) {
+		                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:182: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(PositiveOrZero.class).isPresent()) {
+		                                                          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:182: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (context.findAnnotation(PositiveOrZero.class).isPresent()) {
+		                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:228: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Digits> digits = context.findAnnotation(Digits.class);
+		                 ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:228: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Digits> digits = context.findAnnotation(Digits.class);
+		                                                ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:229: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (digits.isPresent()) {
+		                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:229: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (digits.isPresent()) {
+		          ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:231: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			int integer = digits.get().integer();
+			                        ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:231: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			int integer = digits.get().integer();
+			                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:237: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			scale = digits.get().fraction();
+			                  ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:237: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+			scale = digits.get().fraction();
+			              ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:240: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Min> minAnnotation = context.findAnnotation(Min.class);
+		              ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:240: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+		Optional<Min> minAnnotation = context.findAnnotation(Min.class);
+		                                                    ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:241: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (minAnnotation.isPresent()) {
+		                           ^
+/tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/introspector/JavaxValidationConstraintGenerator.java:241: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.isPresent() [METHOD]
+		if (minAnnotation.isPresent()) {
+		                 ^
+Note: /tmp/experiments/optional-paper-counts-repos/fixture-monkey/fixture-monkey-javax-validation/src/main/java/com/navercorp/fixturemonkey/javax/validation/plugin/JavaxValidationPlugin.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+100 warnings
+
+> Task :fixture-monkey-javax-validation:processResources NO-SOURCE
+> Task :fixture-monkey-javax-validation:classes
+> Task :fixture-monkey-javax-validation:jar
+> Task :fixture-monkey-javax-validation:javadoc SKIPPED
+> Task :fixture-monkey-javax-validation:javadocJar
+> Task :fixture-monkey-javax-validation:sourcesJar
+> Task :fixture-monkey-javax-validation:assemble
+> Task :fixture-monkey-junit-jupiter:compileKotlin
+> Task :fixture-monkey-junit-jupiter:createCheckerFrameworkManifest
+> Task :fixture-monkey-junit-jupiter:compileJava
+> Task :fixture-monkey-junit-jupiter:processResources NO-SOURCE
+> Task :fixture-monkey-junit-jupiter:classes
+> Task :fixture-monkey-junit-jupiter:inspectClassesForKotlinIC
+> Task :fixture-monkey-junit-jupiter:jar
+> Task :fixture-monkey-junit-jupiter:javadoc SKIPPED
+> Task :fixture-monkey-junit-jupiter:javadocJar
+> Task :fixture-monkey-junit-jupiter:sourcesJar
+> Task :fixture-monkey-junit-jupiter:assemble
+> Task :fixture-monkey-kotlin:createCheckerFrameworkManifest
+> Task :fixture-monkey-kotlin:processResources NO-SOURCE
+> Task :fixture-monkey-kotlin:sourcesJar
+> Task :fixture-monkey-mockito:createCheckerFrameworkManifest
+> Task :fixture-monkey-mockito:compileJava
+> Task :fixture-monkey-mockito:processResources NO-SOURCE
+> Task :fixture-monkey-mockito:classes
+> Task :fixture-monkey-mockito:jar
+> Task :fixture-monkey-mockito:javadoc SKIPPED
+> Task :fixture-monkey-mockito:javadocJar
+> Task :fixture-monkey-mockito:sourcesJar
+> Task :fixture-monkey-mockito:assemble
+> Task :fixture-monkey-starter:createCheckerFrameworkManifest
+> Task :fixture-monkey-starter:compileJava NO-SOURCE
+> Task :fixture-monkey-starter:processResources
+> Task :fixture-monkey-starter:classes
+> Task :fixture-monkey-starter:jar
+> Task :fixture-monkey-starter:javadoc SKIPPED
+> Task :fixture-monkey-starter:javadocJar
+> Task :fixture-monkey-starter:sourcesJar
+> Task :fixture-monkey-starter:assemble
+> Task :fixture-monkey-starter-kotlin:createCheckerFrameworkManifest
+> Task :fixture-monkey-starter-kotlin:processResources NO-SOURCE
+> Task :fixture-monkey-starter-kotlin:sourcesJar
+> Task :fixture-monkey-tests:createCheckerFrameworkManifest
+> Task :fixture-monkey-tests:compileJava
+> Task :fixture-monkey-tests:processResources NO-SOURCE
+> Task :fixture-monkey-tests:classes
+> Task :fixture-monkey-tests:jar SKIPPED
+> Task :fixture-monkey-tests:javadoc SKIPPED
+> Task :fixture-monkey-tests:javadocJar SKIPPED
+> Task :fixture-monkey-tests:sourcesJar SKIPPED
+> Task :fixture-monkey-tests:assemble UP-TO-DATE
+> Task :fixture-monkey-tests:java-17-tests:createCheckerFrameworkManifest
+> Task :fixture-monkey-tests:java-17-tests:compileJava NO-SOURCE
+> Task :fixture-monkey-tests:java-17-tests:processResources NO-SOURCE
+> Task :fixture-monkey-tests:java-17-tests:classes UP-TO-DATE
+> Task :fixture-monkey-tests:java-17-tests:jar SKIPPED
+> Task :fixture-monkey-tests:java-17-tests:javadoc SKIPPED
+> Task :fixture-monkey-tests:java-17-tests:javadocJar SKIPPED
+> Task :fixture-monkey-tests:java-17-tests:sourcesJar SKIPPED
+> Task :fixture-monkey-tests:java-17-tests:assemble UP-TO-DATE
+> Task :fixture-monkey-tests:java-concurrent-tests:createCheckerFrameworkManifest
+> Task :fixture-monkey-tests:java-concurrent-tests:compileJava NO-SOURCE
+> Task :fixture-monkey-tests:java-concurrent-tests:processResources NO-SOURCE
+> Task :fixture-monkey-tests:java-concurrent-tests:classes UP-TO-DATE
+> Task :fixture-monkey-tests:java-concurrent-tests:jar SKIPPED
+> Task :fixture-monkey-tests:java-concurrent-tests:javadoc SKIPPED
+> Task :fixture-monkey-tests:java-concurrent-tests:javadocJar SKIPPED
+> Task :fixture-monkey-tests:java-concurrent-tests:sourcesJar SKIPPED
+> Task :fixture-monkey-tests:java-concurrent-tests:assemble UP-TO-DATE
+> Task :fixture-monkey-tests:java-tests:createCheckerFrameworkManifest
+> Task :fixture-monkey-tests:java-tests:compileJava NO-SOURCE
+> Task :fixture-monkey-tests:java-tests:processResources NO-SOURCE
+> Task :fixture-monkey-tests:java-tests:classes UP-TO-DATE
+> Task :fixture-monkey-tests:java-tests:jar SKIPPED
+> Task :fixture-monkey-tests:java-tests:javadoc SKIPPED
+> Task :fixture-monkey-tests:java-tests:javadocJar SKIPPED
+> Task :fixture-monkey-tests:java-tests:sourcesJar SKIPPED
+> Task :fixture-monkey-tests:java-tests:assemble UP-TO-DATE
+> Task :fixture-monkey-tests:kotlin-tests:compileKotlin NO-SOURCE
+> Task :fixture-monkey-tests:kotlin-tests:createCheckerFrameworkManifest
+> Task :fixture-monkey-tests:kotlin-tests:compileJava NO-SOURCE
+> Task :fixture-monkey-tests:kotlin-tests:processResources NO-SOURCE
+> Task :fixture-monkey-tests:kotlin-tests:classes UP-TO-DATE
+> Task :fixture-monkey-tests:kotlin-tests:jar SKIPPED
+> Task :fixture-monkey-tests:kotlin-tests:inspectClassesForKotlinIC
+> Task :fixture-monkey-tests:kotlin-tests:javadoc SKIPPED
+> Task :fixture-monkey-tests:kotlin-tests:javadocJar SKIPPED
+> Task :fixture-monkey-tests:kotlin-tests:sourcesJar SKIPPED
+> Task :fixture-monkey-tests:kotlin-tests:assemble UP-TO-DATE
+> Task :fixture-monkey-kotlin:compileKotlin
+> Task :fixture-monkey-kotlin:compileJava NO-SOURCE
+> Task :fixture-monkey-kotlin:classes UP-TO-DATE
+> Task :fixture-monkey-kotlin:jar
+> Task :fixture-monkey-kotlin:inspectClassesForKotlinIC
+> Task :fixture-monkey-kotlin:javadoc SKIPPED
+> Task :fixture-monkey-kotlin:javadocJar
+> Task :fixture-monkey-kotlin:assemble
+> Task :fixture-monkey-starter-kotlin:compileKotlin NO-SOURCE
+> Task :fixture-monkey-starter-kotlin:compileJava NO-SOURCE
+> Task :fixture-monkey-starter-kotlin:classes UP-TO-DATE
+> Task :fixture-monkey-starter-kotlin:jar
+> Task :fixture-monkey-starter-kotlin:inspectClassesForKotlinIC
+> Task :fixture-monkey-starter-kotlin:javadoc SKIPPED
+> Task :fixture-monkey-starter-kotlin:javadocJar
+> Task :fixture-monkey-starter-kotlin:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 8.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+See https://docs.gradle.org/7.5.1/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 1m 15s
+70 actionable tasks: 70 executed

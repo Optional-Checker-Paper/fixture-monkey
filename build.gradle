@@ -42,6 +42,7 @@ allprojects {
         '-AwarnUnneededSuppressions',
         '-AassumeAssertionsAreEnabled',
         '-AReportChecker_warns',
+         "-Xmaxwarns","99999",
         "-Astubs=${project.projectDir}/reportoptional.astub",
        ]
        excludeTests = true
@@ -142,8 +143,3 @@ subprojects {
     }
 }
 
-afterEvaluate {
-     tasks.withType(JavaCompile) {
-         options.compilerArgs << "-Xmaxwarns" << "99999"
-     }
-}

@@ -57,7 +57,7 @@ subprojects {
         implementation("com.google.code.findbugs:findbugs-annotations:3.0.1")
         compileOnly("org.slf4j:slf4j-api:1.7.25")
         testImplementation("ch.qos.logback:logback-classic:1.2.9")
-        spotbugs("com.github.spotbugs:spotbugs:4.7.1")
+        spotbugs("com.github.spotbugs:spotbugs:4.8.2")
     }
 
     tasks.withType(Javadoc).all { enabled = false }
